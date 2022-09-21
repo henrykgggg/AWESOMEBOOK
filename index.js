@@ -35,3 +35,13 @@ bookForm.addEventListener('submit', () => {
   localStorage.setItem('books', JSON.stringify(obj));
 });
 
+const removeBtn = document.querySelectorAll('.remove-btn');
+removeBtn.forEach((item) => item.addEventListener('click', () => {
+  const removeId = parseInt(item.id, 10);
+  const obj = JSON.parse(localStorage.getItem('books'));
+  booklist = obj.allbook;
+  booklist = booklist.filter((element, index) => index !== removeId);
+  obj.allbook = booklist;
+  localStorage.setItem('books', JSON.stringify(obj));
+  window.location.reload();
+}));
