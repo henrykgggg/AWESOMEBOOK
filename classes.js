@@ -20,7 +20,7 @@ class Book {
     const obj = JSON.parse(localStorage.getItem('books'));
     // set obj to empty
     obj.allbook = [];
-     // push new book to obj
+    // push new book to obj
 
     if (this.title.value !== '' && this.author.value !== '') {
       alert('successfully added a book');
@@ -31,6 +31,7 @@ class Book {
     }
     localStorage.setItem('books', JSON.stringify(obj));
   }
+
   static removeBook(title) {
     const books = Book.getBooks();
 
@@ -48,6 +49,7 @@ class Book {
       el.parentElement.parentElement.remove();
     }
   }
+
   static getBooks() {
     let books;
     if (localStorage.getItem('books') === null) {
