@@ -68,3 +68,20 @@ function display() {
             `;
   });
 }
+
+// add event listener to the form
+bookForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const newBook = new Book(bookTitle.value, bookAuthor.value);
+  if (bookTitle.value !== '' && bookAuthor.value !== '') {
+    newBook.add();
+    bookTitle.value = '';
+    bookAuthor.value = '';
+    display();
+  }
+});
+
+document.querySelector('#book-list').addEventListener('click', (e) => {
+
+  Book.removeBook(e.target.parentElement.previousElementSibling.textContent);
+});
