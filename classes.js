@@ -106,3 +106,4 @@ document.querySelector('#book-list').addEventListener('click', (e) => {
   Book.deleteBook(e.target);
 
 });
+window.onload = display();
