@@ -31,3 +31,14 @@ class Book {
     }
     localStorage.setItem('books', JSON.stringify(obj));
   }
+  static removeBook(title) {
+    const books = Book.getBooks();
+
+    books.forEach((book, index) => {
+      if (book.title === title) {
+        books.splice(index, 1);
+      }
+    });
+
+    localStorage.setItem('books', JSON.stringify(books));
+  }
