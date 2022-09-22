@@ -29,7 +29,6 @@ class Book {
     localStorage.setItem('books', JSON.stringify(obj));
   }
 
-
   static removeBook(title) {
     const books = Book.getBooks();
 
@@ -57,7 +56,6 @@ class Book {
     }
   }
 
-
   static getBooks() {
     let books;
     if (localStorage.getItem('books') === null) {
@@ -76,7 +74,7 @@ class Book {
   }
 }
 
-function display () {
+function display() {
   const obj = JSON.parse(localStorage.getItem('books'));
   if (obj !== undefined) {
     // Added below and added a fullstop to separate title
@@ -88,7 +86,7 @@ function display () {
               `;
     });
   }
-};
+}
 
 // add event listener to the form
 bookForm.addEventListener('submit', (e) => {
@@ -104,6 +102,5 @@ bookForm.addEventListener('submit', (e) => {
 
 document.querySelector('#book-list').addEventListener('click', (e) => {
   Book.deleteBook(e.target);
-
 });
 window.onload = display();
