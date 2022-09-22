@@ -65,15 +65,6 @@ class Book {
     localStorage.setItem('books', JSON.stringify(books));
   }
 }
-function display() {
-  const obj = JSON.parse(localStorage.getItem('books'));
-  obj.allbook.forEach((item) => {
-    booksList.innerHTML += `
-            <td>${'"'}${item.title}${'"'}${' '}${'By'}${' '}${item.author}</td>
-        <td><a href="#" class="btn btn-danger btn-sm delete">Remove</a></td>
-            `;
-  });
-}
 
 // add event listener to the form
 bookForm.addEventListener('submit', (e) => {
