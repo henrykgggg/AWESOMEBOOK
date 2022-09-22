@@ -23,7 +23,7 @@ class Book {
      // push new book to obj
 
     if (this.title.value !== '' && this.author.value !== '') {
-      alert('Book title and author are required');
+      alert('successfully added a book');
       obj.allbook.push({
         title: this.title,
         author: this.author,
@@ -41,6 +41,12 @@ class Book {
     });
 
     localStorage.setItem('books', JSON.stringify(books));
+  }
+
+  static deleteBook(el) {
+    if (el.classList.contains('delete')) {
+      el.parentElement.parentElement.remove();
+    }
   }
   static getBooks() {
     let books;
@@ -82,6 +88,7 @@ bookForm.addEventListener('submit', (e) => {
 });
 
 document.querySelector('#book-list').addEventListener('click', (e) => {
+  Book.deleteBook(e.target);
 
   Book.removeBook(e.target.parentElement.previousElementSibling.textContent);
 });

@@ -8,3 +8,9 @@
   background-color: brown;
   color: #fff;
 }
+
+#submit {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
