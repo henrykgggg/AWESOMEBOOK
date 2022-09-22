@@ -13,7 +13,7 @@ Personal library which allow user to add name of the book and at the same time w
 
 ## Live Demo
 
-[Live Demo Link](https://github.com/henrykgggg/AWESOMEBOOK/tree/awesomebook)
+[Live Demo Link]( https://henrykgggg.github.io/AWESOMEBOOK/)
 
 
 
