@@ -103,4 +103,35 @@ bookForm.addEventListener('submit', (e) => {
 document.querySelector('#book-list').addEventListener('click', (e) => {
   Book.deleteBook(e.target);
 });
+const d = new Date();
+document.getElementById('current_date').innerHTML = d;
+
+const newBook = document.getElementById('newbookLi');
+const myForm = document.getElementById('myForm');
+const myBookList = document.getElementById('bookList');
+const myList = document.getElementById('list');
+const myHome = document.getElementById('home');
+const myContact = document.getElementById('contacts');
+const contactNavLink = document.getElementById('contactNavLi');
+
+newBook.addEventListener('click', () =>{
+  myContact.style.cssText ='display: none;';
+  myBookList.style.cssText = 'display: none;';
+  myForm.style.cssText = 'display:flex;';
+});
+
+myList.addEventListener('click', () => {
+  myForm.style.cssText = 'display: none;';
+  myBookList.style.cssText = 'display: flex;';
+  myContact.style.cssText = 'display: none;';
+});
+
+contactNavLink.addEventListener('click', () => {
+  myForm.style.cssText = 'display: none;';
+  myBookList.style.cssText = 'display: none;';
+  myContact.style.cssText = 'display: flex;';
+});
+myForm.style.cssText = 'display: none;';
+myContact.style.cssText = 'display: none;';
+
 window.onload = display();
