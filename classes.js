@@ -110,12 +110,11 @@ const newBook = document.getElementById('newbookLi');
 const myForm = document.getElementById('myForm');
 const myBookList = document.getElementById('bookList');
 const myList = document.getElementById('list');
-const myHome = document.getElementById('home');
 const myContact = document.getElementById('contacts');
 const contactNavLink = document.getElementById('contactNavLi');
 
-newBook.addEventListener('click', () =>{
-  myContact.style.cssText ='display: none;';
+newBook.addEventListener('click', () => {
+  myContact.style.cssText = 'display: none;';
   myBookList.style.cssText = 'display: none;';
   myForm.style.cssText = 'display:flex;';
 });
